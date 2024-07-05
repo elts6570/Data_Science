@@ -55,8 +55,6 @@ def plot_results(y_test, y_pred):
 
 
 if __name__ == "__main__":
-    from model import build_and_evaluate_model
-    from preprocess import load_and_preprocess_data
     data = load_and_preprocess_data('GLM_data.csv')
     mse, r2, results = build_and_evaluate_model(data)
     print(f'Mean Squared Error: {mse}')
