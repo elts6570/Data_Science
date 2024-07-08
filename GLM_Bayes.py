@@ -30,7 +30,7 @@ def simulate_data():
 
 def set_priors():
     """
-    This function generates synthetic data with a given model.
+    This function sets the priors on each free parameter.
 
     Returns
     -------
@@ -68,6 +68,7 @@ def diagnostics(trace):
     """
     print("Summary statistics:")
     summary = az.summary(trace)
+    print(summary)
     
     print("Trace plots:")
     az.plot_trace(trace)
@@ -85,7 +86,7 @@ def diagnostics(trace):
     ess = az.ess(trace)
     print(ess)
     
-    return summary, rhat, ess
+    return None
 
 
 if __name__ == "__main__":
