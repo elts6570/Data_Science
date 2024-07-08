@@ -6,6 +6,19 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 
 def load_and_preprocess_data(file_path):
+    """
+    This function loads the weather data. 
+
+    Parameters
+    ----------
+    file_path : string
+        name of the data file, absolute path
+
+    Returns
+    -------
+    data : pandas dataset
+        date data 
+    """
     data = pd.read_csv(file_path)
     
     data['date'] = pd.to_datetime(data['datetime'])
@@ -17,6 +30,18 @@ def load_and_preprocess_data(file_path):
 
 
 def build_and_evaluate_model(data):
+    """
+    This function builds the GLM, trains it and fits it. 
+
+    Returns
+    -------
+    mse : float
+        mean squared error
+    r2 : float
+        R2 score
+    results : array_like
+        model fitted to training data
+    """
     X = data[['month', 'day', 'dew', 'humidity', 'uvindex', 'precip']]
     y = data['temp']
     
@@ -37,6 +62,19 @@ def build_and_evaluate_model(data):
 
 
 def plot_results(y_test, y_pred):
+    """
+    This function visualises the results in the form of ground truth vs prediction 
+    and residuals.
+
+    Parameters
+    ----------
+    y_test : array_like
+        temperature of test data
+    y_pred : array_like
+        temperature predicted by the model on test data
+
+    """
+
     plt.figure(figsize=(10, 6))
     plt.scatter(y_test, y_pred, alpha=0.3)
     plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], '--', color='red')
@@ -52,6 +90,7 @@ def plot_results(y_test, y_pred):
     plt.ylabel('Frequency')
     plt.title('Distribution of Residuals')
     plt.show()
+    return None
 
 
 if __name__ == "__main__":
