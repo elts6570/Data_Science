@@ -4,9 +4,13 @@ Welcome to the Data Science Tutorials repository! This repository contains tutor
 
 ## Tutorials Available:
 
-1. **Generalised Linear Models (GLMs):**
-   - Tutorial Link: GLM.py
-   - Description: In this tutorial, we predict the daily temperature in a city based on historical dew point, humidity, UV index and precipitation data from https://www.visualcrossing.com/weather-api. 
+1. **Frequentist Generalised Linear Models:**
+   - Tutorial: GLM.py
+   - Description: In this tutorial, we predict the daily temperature in a city based on historical dew point, humidity, UV index and precipitation data from https://www.visualcrossing.com/weather-api.
+  
+2. **Bayesian Generalised Linear Models:**
+   - Tutorial: GLM_Bayes.py
+   - Description: In this tutorial, we infer the coefficients of a Generalised Linear Model on self-consistent synthetic data.
 
 ## Usage:
 
@@ -27,6 +31,9 @@ Ensure you have the necessary dependencies installed:
 - matplotlib
 - sklearn
 - statsmodels
+- pymc
+- bambi
+- arviz
 
 ## Acknowledgements and feedback:
 
