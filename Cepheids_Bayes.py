@@ -16,7 +16,7 @@ def read_data():
     data : pandas dataset
         period (x) vs absolute magnitude (y) data 
     """
-    df = pd.read_csv('Cepheids.csv', delimiter=' ')
+    df = pd.read_csv('data/Cepheids.csv', delimiter=' ')
     data = pd.DataFrame({'x': df['P']})
     data['y'] = df['M']
     data['log10_x_minus_1'] = np.log10(data['x']) - 1
