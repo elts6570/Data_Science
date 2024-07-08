@@ -94,7 +94,7 @@ def plot_results(y_test, y_pred):
 
 
 if __name__ == "__main__":
-    data = load_and_preprocess_data('GLM_data.csv')
+    data = load_and_preprocess_data('data/GLM_data.csv')
     mse, r2, results = build_and_evaluate_model(data)
     print(f'Mean Squared Error: {mse}')
     print(f'R-squared: {r2}')
