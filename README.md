@@ -11,7 +11,7 @@ Welcome to the Data Science Tutorials repository! This repository contains tutor
 2. **Bayesian Generalised Linear Models:**
    - Tutorial: GLM_Bayes.py
    - Description: In this tutorial, we infer the coefficients of a Generalised Linear Model on self-consistent synthetic data.
-  
+  <br/><br/>
    - Exercise: Cepheids_Bayes.py
    - Description: Infer the parameters of the Cepheid period - luminosity relation using the data in http://www.physics.uwyo.edu/~jessicas/teach/astron/cephiedperiodlum.pdf. 
 
